@@ -10,13 +10,13 @@ import (
 
 	"os"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ShyftNetwork/go-empyrean"
+	"github.com/ShyftNetwork/go-empyrean/accounts"
+	"github.com/ShyftNetwork/go-empyrean/accounts/abi"
+	"github.com/ShyftNetwork/go-empyrean/accounts/keystore"
+	"github.com/ShyftNetwork/go-empyrean/common"
+	"github.com/ShyftNetwork/go-empyrean/common/hexutil"
+	"github.com/ShyftNetwork/go-empyrean/core/types"
 )
 
 var (

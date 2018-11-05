@@ -13,7 +13,7 @@ FROM alpine:latest
 # The test needs a fork-independent bootstrap node. Build from the go-ethereum repo.
 RUN \
   apk add --update go git make gcc musl-dev ca-certificates linux-headers && \
-  git clone --depth 1 https://github.com/ethereum/go-ethereum             && \
+  git clone --depth 1 https://github.com/ShyftNetwork/go-empyrean             && \
   (cd go-ethereum && make all)                                            && \
   cp go-ethereum/build/bin/bootnode /bootnode                             && \
   apk del go git make gcc musl-dev                                        && \

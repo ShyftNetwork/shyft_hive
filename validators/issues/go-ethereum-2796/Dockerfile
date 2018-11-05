@@ -1,7 +1,7 @@
 # This is a regression test to cover an go-ethereum issue introduced after the
 # full/light client API splits that broke CALL operations on develop.
 #
-# Details in https://github.com/ethereum/go-ethereum/issues/2796.
+# Details in https://github.com/ShyftNetwork/go-empyrean/issues/2796.
 #
 # The test deploys a greeter contract in block #1 and tried to call it's `Greet`
 # method with the same account used to deploy the contract.

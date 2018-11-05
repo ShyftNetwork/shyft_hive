@@ -3,7 +3,7 @@
 # different code paths, causing nodes to be unable to connect to each other if
 # the network ID was larger that maxuint32.
 #
-# Details in https://github.com/ethereum/go-ethereum/issues/14359
+# Details in https://github.com/ShyftNetwork/go-empyrean/issues/14359
 #
 # The test starts up a network of two nodesand checks that they can successfully
 # connect to each other.
@@ -12,7 +12,7 @@ FROM alpine:latest
 # Build a bootnode to cross-discover the two plain nodes
 RUN \
   apk add --update go git make gcc musl-dev linux-headers     && \
-  git clone --depth 1 https://github.com/ethereum/go-ethereum && \
+  git clone --depth 1 https://github.com/ShyftNetwork/go-empyrean && \
   (cd go-ethereum && make all)                                && \
   cp go-ethereum/build/bin/bootnode /bootnode                 && \
   apk del go git make gcc musl-dev                            && \

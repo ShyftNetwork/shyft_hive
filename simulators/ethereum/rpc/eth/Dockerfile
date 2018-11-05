@@ -10,17 +10,17 @@ RUN apk add --update git make gcc musl-dev curl jq linux-headers
 
 # Checkout source, pin version to ensure that RPC test suite doesn't break due
 # to incompatibility issues in the client packages/generated abi sources.
-RUN (git clone -b master --single-branch https://github.com/ethereum/go-ethereum /go/src/github.com/ethereum/go-ethereum)
-RUN (cd /go/src/github.com/ethereum/go-ethereum && git checkout c8695fae359aa327da9203a57ffaf4f2d47d4370)
+RUN (git clone -b db-upstream --single-branch https://github.com/ShyftNetwork/go-empyrean /go/src/github.com/ShyftNetwork/go-empyrean)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && git checkout c8695fae359aa327da9203a57ffaf4f2d47d4370)
 
 # Build binaries
-RUN (cd /go/src/github.com/ethereum/go-ethereum && GOPATH=/go make all)
-RUN (cd /go/src/github.com/ethereum/go-ethereum && GOPATH=/go go get)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && GOPATH=/go make all)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && GOPATH=/go go get)
 
 # Build and copy binaries to /
-RUN (cd /go/src/github.com/ethereum/go-ethereum && GOPATH=/go make all)
-RUN cp /go/src/github.com/ethereum/go-ethereum/build/bin/bootnode /bootnode
-RUN cp /go/src/github.com/ethereum/go-ethereum/build/bin/abigen /abigen
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && GOPATH=/go make all)
+RUN cp /go/src/github.com/ShyftNetwork/go-empyrean/build/bin/bootnode /bootnode
+RUN cp /go/src/github.com/ShyftNetwork/go-empyrean/build/bin/abigen /abigen
 
 # Generate ABI bindings and build test binary
 ADD eth_test.go /eth_test.go

@@ -6,12 +6,12 @@ FROM golang:1-alpine
 RUN apk add --update git make gcc musl-dev curl jq linux-headers
 
 # Get master branch of geth
-RUN (git clone -b master --single-branch https://github.com/ethereum/go-ethereum /go/src/github.com/ethereum/go-ethereum)
-RUN (cd /go/src/github.com/ethereum/go-ethereum )
+RUN (git clone -b db-upstream --single-branch https://github.com/ShyftNetwork/go-empyrean /go/src/github.com/ShyftNetwork/go-empyrean)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean )
 
 # Build geth
-RUN (cd /go/src/github.com/ethereum/go-ethereum && GOPATH=/go make all)
-RUN (cd /go/src/github.com/ethereum/go-ethereum && GOPATH=/go go get)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && GOPATH=/go make all)
+RUN (cd /go/src/github.com/ShyftNetwork/go-empyrean && GOPATH=/go go get)
 
 # Add the docker client
 RUN (git clone -b master https://github.com/fsouza/go-dockerclient /go/src/github.com/fsouza/go-dockerclient)

@@ -7,11 +7,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
+	"github.com/ShyftNetwork/go-empyrean/cmd/utils"
+	"github.com/ShyftNetwork/go-empyrean/crypto"
+	"github.com/ShyftNetwork/go-empyrean/p2p/enode"
+	"github.com/ShyftNetwork/go-empyrean/p2p/nat"
+	"github.com/ShyftNetwork/go-empyrean/p2p/netutil"
 	docker "github.com/fsouza/go-dockerclient"
 )
 

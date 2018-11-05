@@ -2,7 +2,7 @@
 # chain from an exported RLP dump. It ensures that testnet nonces are correctly
 # handled for chain initialization as well as import operations.
 #
-# Details in https://github.com/ethereum/go-ethereum/issues/2905
+# Details in https://github.com/ShyftNetwork/go-empyrean/issues/2905
 FROM alpine:latest
 
 # The test is trivial, just initializes a chain and returns
