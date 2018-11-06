@@ -123,4 +123,4 @@ fi
 
 # Run the go-ethereum implementation with the requested flags
 echo "Running go-empyrean..."
-/geth $FLAGS --nat=none --nodiscover --rpc --rpcaddr "0.0.0.0" --rpcapi "admin,debug,eth,miner,net,personal,shh,txpool,web3" --ws --wsaddr "0.0.0.0" --wsapi "admin,debug,eth,miner,net,personal,shh,txpool,web3" --wsorigins "*"
+/geth $FLAGS --nat=none --disablepg --nodiscover --rpc --rpcaddr "0.0.0.0" --rpcapi "admin,debug,eth,miner,net,personal,shh,txpool,web3" --ws --wsaddr "0.0.0.0" --wsapi "admin,debug,eth,miner,net,personal,shh,txpool,web3" --wsorigins "*"
