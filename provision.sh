@@ -31,7 +31,7 @@ sudo usermod -aG docker vagrant
 curl https://dl.google.com/go/go1.11.linux-amd64.tar.gz --output go.tgz
 sudo tar -C /usr/local -xaf go.tgz
 sudo mkdir -p /go/bin
-sudo mkdir -p /go/src/github.com/karalabe/hive
+sudo mkdir -p /go/src/github.com/ShyftNetwork/shyft_hive
 sudo chown -R vagrant:vagrant /go
 cat >> /home/vagrant/.bashrc <<EOF
 export GOPATH=/go
@@ -46,5 +46,6 @@ echo "GOBIN: $GOBIN"
 echo "PATH: $PATH"
  # Compile Hive
 echo "Compiling..."
-cd /go/src/github.com/karalabe/hive
+cd /go/src/github.com/ShyftNetwork/shyft_hive
+go get -u github.com/karalabe/hive
 go install ./
